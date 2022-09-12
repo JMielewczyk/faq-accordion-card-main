@@ -28,6 +28,7 @@ body {
 .main {
     width: 330px;
     height: 600px;
+    transition: .1s;
 }
 
 .wrapper {
@@ -46,10 +47,10 @@ body {
     transform: translateY(-58%);
 }
 
-.section_img img:nth-child(5) {
+.section_img img:nth-child(4) {
     transform: translateY(-15%);
 }
-.section_img img:nth-child(4) {
+.section_img img:nth-child(3) {
     transform: translateY(35%);
 }
 .section_faq {
@@ -115,5 +116,83 @@ h1 {
     transform: rotate(180deg);
 }
 
+@media (min-width: 900px) {
+    .mobile {
+        display: none;
+    }
+    
+    .desktop {
+    display: block;
+}
 
+.main {
+    position: relative;
+    width: 80vw;
+    max-width: 1000px;
+    height: 470px;
+}
+
+img.outerbox {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-48% , -50%);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.wrapper {
+    flex-direction: row;
+    transform: translateY(0);
+    overflow: hidden; 
+}
+
+.section_img {
+    position: static;
+    width: 50%;
+    height: 100%;
+    transform: none;
+}
+
+.section_img img {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.section_img img:nth-of-type(1) {
+    transform: translate(-15%, 0)
+}
+
+.section_img img:nth-of-type(2) {
+    z-index: -1;
+    width: 680px;
+    height: 680px;
+    transform: translate(-50%, -20%);
+}
+
+.section_faq {
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 50%;
+    padding: 0 80px 50px 20px;
+}
+
+h1 {
+    padding-top: 10%;
+}
+
+.section_faq div p{
+    transition: .1s;
+}
+
+.section_faq div:hover p.question{
+    color: hsl(14, 88%, 65%);
+}
+
+
+}
 
